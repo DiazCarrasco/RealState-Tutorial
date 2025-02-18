@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
@@ -9,11 +10,12 @@ import { HousingService } from '../housing.service';
   standalone: true,
   imports: [
     CommonModule,
-    HousingLocationComponent
+    HousingLocationComponent,
+    RouterLink
   ],
   template: `
-    <section>
-      <form>
+    <section class="header">
+    <form>
         <input type="text" placeholder="Filter by city" #filter>
         <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
       </form>
@@ -49,4 +51,3 @@ export class HomeComponent {
     );
   }
 }
-

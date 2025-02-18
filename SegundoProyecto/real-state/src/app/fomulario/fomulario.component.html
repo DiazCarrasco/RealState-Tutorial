@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nombreUsuario">Nombre de Usuario:</label>
+      <input id="nombreUsuario" formControlName="nombreUsuario">
+    </div>
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input id="apellido" formControlName="apellido">
+    </div>
+    <div>
+      <label for="edad">Edad:</label>
+      <input id="edad" type="number" formControlName="edad">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+    <div>
+        <label for="check">Aceptar condiciones:</label>
+        <input type="checkbox">
+    </div>
+    <button type="submit">Registrar</button>
+  </form>
